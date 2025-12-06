@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         main{
+            height: auto;
+            width: 1200px;
+            background-color: aquamarine;
+            margin:0 auto;
+            display: grid;
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-rows: 150px 500px 200px 200px ;
+            gap: 20px;
+            
+        }
+        .box{
+            background-color: red;
+            height:100px;
+        }
+        @media screen and (max-width:375px) and (min-width:68px){
+            main{
+                display:grid;
+                grid-template-columns: repeat(1,1fr);
+                gap:20px;
+                background-color: aqua;
+            }
+        } 
+        #left_right{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:20px;
+        }
+        .left_box,.right_box{
+            background-color: blueviolet;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div id="left_right">
+        <div class="left_box">left</div>
+        <div class="right_box">right</div></div>
+    <div class="box">4</div>
+    </main>
+</body>
+</html>
